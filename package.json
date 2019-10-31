@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/CamilaChica/google-books-search/issues"
   },
-  "homepage": "https://github.com/CamilaChica/google-books-search#readme"
+  "homepage": "https://github.com/CamilaChica/google-books-search#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.7.7",
+    "path": "^0.12.7"
+  }
 }
