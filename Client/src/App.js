@@ -1,5 +1,5 @@
-import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import React from "./node_modules/react";
+import { BrowserRouter as Router, Route, Switch } from "./node_modules/react-router-dom";
 import SaveBooks from "./pages/SaveBooks";
 import SearchBooks from "./pages/SearchBooks";
 import NoMatch from "./pages/NoMatch";
