@@ -8,9 +8,12 @@ mongoose.connect(
     useCreateIndex: true,
     useNewUrlParser: true,
     useFindAndModify: false,
+    useUnifiedTopology: true,
     family: 4 // Use IPv4, skip trying IPv6
   }
 );
+
+
 
 const booksSeed = [
   {
@@ -67,8 +70,14 @@ const booksSeed = [
 async function seed() {
   await mongoose
     .connect(
-      MONGODB_URI,
-      options
+      process.env.MONGODB_URI || "mongodb://localhost/googlebooks",
+      {
+        useCreateIndex: true,
+        useNewUrlParser: true,
+        useFindAndModify: false,
+        useUnifiedTopology: true,
+        family: 4 // Use IPv4, skip trying IPv6
+      }
     )
     .then(() => {
       console.log("Seed: Connected to Database");
